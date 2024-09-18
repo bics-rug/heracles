@@ -1,0 +1,14 @@
+parameters area_mc=0 t_fe_mc=0 t_int_mc=0 d_e_mc=0 p_s_mc=0 n_depl_mc=0  
+
+statistics{
+    process{ // Variation per MC run
+	vary t_int_mc dist=gauss std=2.2e-10
+	vary p_s_mc dist=gauss std=0.027
+	vary n_depl_mc dist=gauss std=0.265e28
+   	truncate tr=3
+    }
+    mismatch{ // Variation per instance
+	vary area dist=gauss std=1e-12
+	truncate tr=3
+    }
+}
