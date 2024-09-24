@@ -4,11 +4,9 @@ Heracles is physics-based compactor model for HfO2-based ferroelectric capacitor
 
 ## Examples
 
-Cadence and ngspice following up.
+A Verilog-A implementation that is tested in Cadence Spectre is available, including Monte-Carlo parameters. The paramters were extracted from measurement data by the Department of Electrical Engineering of IIT Bombay, as seen in the article cited below. 
 
 ## Documentation
-
-Welp.
 
 ## Contributing
 
