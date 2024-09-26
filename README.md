@@ -1,4 +1,5 @@
 # Heracles
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13844858.svg)](https://doi.org/10.5281/zenodo.13844858)
 
 Heracles is a physics-based compact model for HfO2-based ferroelectric capacitors. It includes thermal models, interface layers and accurately reproduces several device phenomena, such as transient polarization switching and capacitance hysteresis. Heracles consists of a stateful and computationally efficient non-equilibrium thermodynamics description of the device behaviour, allowing for efficient Monte Carlo simulations even in larger analog CMOS circuits. This makes Heracles suitable for Design-Technology Co-Optimization (DTCO) approaches to (analog) compute-in-memory, neuromorphic systems or sensory circuit design.
 
