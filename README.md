@@ -19,9 +19,12 @@ If you find Heracles useful in your work, please cite the following source:
 
 ```
 @article{fehlings2024heracles,
-	title = {},
-	author = {},
-	journal = {arXiv preprint arXiv:XXXX.YYYYY},
-	year = {2024}
+      title={Heracles: A HfO$\mathrm{_2}$ Ferroelectric Capacitor Compact Model for Efficient Circuit Simulations}, 
+      author={Luca Fehlings and Md Hanif Ali and Paolo Gibertini and Egidio A. Gallicchio and Udayan Ganguly and Veeresh Deshpande and Erika Covi},
+      year={2024},
+      eprint={2410.07791},
+      archivePrefix={arXiv},
+      primaryClass={cs.ET},
+      url={https://arxiv.org/abs/2410.07791}, 
 }
 ```
