@@ -15,7 +15,7 @@ A Verilog-A implementation that is tested in Cadence Spectre is available, inclu
 
 ## Citation
 
-If you find Heracles useful in your work, please cite the following source:
+If you find Heracles useful in your work, please cite the following [source](https://arxiv.org/abs/2410.07791):
 
 ```
 @article{fehlings2024heracles,
