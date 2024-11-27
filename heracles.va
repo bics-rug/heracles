@@ -11,7 +11,8 @@
 `include "disciplines.vams"
 `define P_ME    9.1093837e-31
 
-module fecap_landau_mod(te, be);
+//(* compact_module *)
+module heracles(te, be);
     // Ports
     inout te, be;
 
@@ -85,9 +86,9 @@ module fecap_landau_mod(te, be);
     // Variables
     (* desc="Current densities", units="A/m^2" *)
     real i_cfe, i_cint, i_p, i_leakp, i_leakbe, i_t, i_pf;
-    (* desc="Occupation probability of down polarization state" *)
+    (* desc="Occupation probability of down polarization state", units="1" *)
     real p;
-    (* desc="Ferroelectric Polarization" *)
+    (* desc="Ferroelectric Polarization", units="F/m^2" *)
     real pol;
     (* desc="Transition rates" *)
     real k_plus, k_minus;
