@@ -6,6 +6,10 @@ Heracles is a physics-based compact model for HfO2-based ferroelectric capacitor
 
 A Verilog-A implementation that is tested in Cadence Spectre is available, including Monte-Carlo parameters. The parameters were extracted from measurement data by the Department of Electrical Engineering of IIT Bombay, as seen in the article cited below.
 
+### Virtuoso
+To use the model in Cadence Virtuoso, create a cell called *fecap* view with a symbol. Then, in the Virtuoso main window, open *Tools/CDF/Edit* and load *fecap.cdf*. Now import the model card in your Maestro test bench via *Setup/Model Libraries*, for example *fehlings2024.scs* for the model card of the source citation.
+
+Alternatively create a *veriloga* view and paste in the source code, then import the model card in Maestro. Keep in mind that in this way mismatch Monte Carlo simulations may not work, depending on your Virtuoso configuration and CMOS PDK.
 ## Documentation
 
 ## Contributing
