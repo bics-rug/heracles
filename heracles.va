@@ -124,8 +124,8 @@ module heracles(te, be);
         c_depl_tot = (p * c_depl_d + (1 - p) * c_depl_u);
         pol = 2 * (p_s + p_s_mc) * p;
         e_fe = V(fecap) / (t_fe + t_fe_mc);
-        e_be = V(bottom) / (t_int + t_int_mc);
-        e_leakage = (V(fecap) + V(interface)) / (t_fe + t_fe_mc);
+        e_be = $limit(V(bottom), "pnjlim", $vt, 5) / (t_int + t_int_mc);
+        e_leakage = $limit(V(leakage), "pnjlim", $vt, 5) / (t_fe + t_fe_mc);
         sign_vfe = $tanh(1e3 * V(fecap));
         sign_vbe = $tanh(1e3 * V(bottom));
 
