@@ -58,7 +58,7 @@ statistics{
    	truncate tr=3
     }
     mismatch{ // Variation per instance
-	vary area dist=gauss std=1e-12
+	vary area_mc dist=gauss std=1e-12
 	truncate tr=3
     }
 }
