@@ -66,7 +66,7 @@ module heracles(te, be);
     (* desc="Electrode/Interface Energy barrier height", units="eV" *)
     parameter real phi_b_int = 0.65  from(0:5];
     (*desc="Electronic drift mobility", units="m^2 V^-1 s^-1"*)
-    parameter real mu_fe = 15e-4       from[1e-4:20e-4];
+    parameter real mu_fe = 15e-4       from[1e-4:1000];
     (*desc="Density of states in the conduction band", units="m^-3"*)
     parameter real n_c_fe = 1e24        from[1e18:1e28];
     (*desc="Trap depth", units="eV"*)
