@@ -52,8 +52,9 @@ module heracles(te, be);
     (* desc="Relative permittivity of the electrode"*)
     parameter real eps_depl = 3.6   from(0:100];
     (* desc="Fixed charge at depletion/ferrolectric interface"*)
-    parameter real q_fix_depl = 9.8e-2   from[0:1];
-
+    parameter real q_fix_depl_u = 9.8e-2   from[-1:1];
+    (* desc="Fixed charge at depletion/ferrolectric interface"*)
+    parameter real q_fix_depl_d = 9.8e-2   from[-1:1];
 
     // Fowler-Nordheim and Poole-Frenkel conduction parameters
     (* desc="Electron effective mass in the ferroelectric" *)
@@ -119,8 +120,8 @@ module heracles(te, be);
         // Initial definitions
         c_fe = `P_EPS0 * eps_fe / (t_fe + t_fe_mc);
         c_int = `P_EPS0 * eps_int / (t_int + t_int_mc);
-        c_depl_u = `P_EPS0 * eps_depl / (abs(`P_EPS0 * eps_fe * V(fecap) / (t_fe + t_fe_mc) -  q_fix_depl) / `P_Q / (n_depl + n_depl_mc));
-        c_depl_d = `P_EPS0 * eps_depl / ((`P_EPS0 * eps_fe * V(fecap) / (t_fe + t_fe_mc) +  q_fix_depl) / `P_Q / (n_depl + n_depl_mc));
+        c_depl_u = `P_EPS0 * eps_depl / abs(`P_EPS0 * eps_fe * e_fe + q_fix_depl_u) * `P_Q * (n_depl + n_depl_mc);
+        c_depl_d = `P_EPS0 * eps_depl / abs(`P_EPS0 * eps_fe * e_fe + q_fix_depl_d) * `P_Q * (n_depl + n_depl_mc);
         c_depl_tot = (p * c_depl_d + (1 - p) * c_depl_u);
         pol = 2 * (p_s + p_s_mc) * p;
         e_fe = V(fecap) / (t_fe + t_fe_mc);
