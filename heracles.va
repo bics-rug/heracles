@@ -52,7 +52,7 @@ module heracles(te, be);
     (* desc="Relative permittivity of the electrode"*)
     parameter real eps_depl = 3.6   from(0:100];
     (* desc="Fixed charge at depletion/ferrolectric interface"*)
-    parameter real q_fix_depl_u = 9.8e-2   from[-1:1];
+    parameter real q_fix_depl_u = -9.8e-2   from[-1:1];
     (* desc="Fixed charge at depletion/ferrolectric interface"*)
     parameter real q_fix_depl_d = 9.8e-2   from[-1:1];
 
