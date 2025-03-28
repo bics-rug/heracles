@@ -10,15 +10,11 @@ R1 in te 50
 
 .probe I(V1)
 .control
-    *set debug
-    *set ngdebug
     pre_osdi heracles.osdi
-    *dc V1 -3 3 0.1
     tran 1u 2m
     write out.raw
-    *plot TE in 
-    *plot -i(V1)
-    *quit
+    plot TE in 
+    plot -i(V1)
 .endc
 
 .end
