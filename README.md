@@ -11,6 +11,12 @@ A Verilog-A implementation that is tested in Cadence Spectre is available, inclu
 To use the model in Cadence Virtuoso, create a cell called *fecap* with a symbol view (type schematicSymbol) and rename this symbol view to *spectre*. Create a symbol with 2 inout pins named te and be. Then, in the Virtuoso main window, open *Tools/CDF/Edit* and load *fecap.cdf*. Now import the model card in your Maestro test bench via *Setup/Model Libraries*, for example *fehlings2024.scs* for the model card of the source citation. In Setup/environment (or in the hierachy editor when used) make sure that the *spectre* view is included in switch and stop lists.
 
 Alternatively create a *veriloga* view and paste in the source code, then import the model card in Maestro. Keep in mind that in this way mismatch Monte Carlo simulations may not work, depending on your Virtuoso configuration and CMOS PDK.
+
+### Ngspice
+For a demo in ngspice, compile the source code using the OpenVAF Verilog-A compiler or download the osdi binary with the release. Then run the included testbench to get a basic hysteresis curve:
+
+`ngspice ngspice/testbench.sp`
+
 ## Documentation
 
 ## Contributing
