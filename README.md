@@ -19,6 +19,9 @@ For a demo in ngspice, compile the source code using the OpenVAF Verilog-A compi
 `ngspice ngspice/testbench.sp`
 
 ## Documentation
+[Heracles Documentation](https://bics-rug.github.io/heracles/)
+
+The documentation is still work in progress. 
 
 ## Contributing
 
