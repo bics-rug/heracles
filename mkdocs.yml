@@ -2,5 +2,8 @@ site_name: Heracles
 nav:
   - Home: index.md
   - About: about.md
+  - Getting started: getstarted.md
+  - Parameters: parameters.md
+  - Virtuoso: virtuoso.md
 theme:
   name: material
