@@ -1,8 +1,22 @@
-# Heracles
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13844857.svg)](https://doi.org/10.5281/zenodo.13844857)
+# Heracles - A Ferroelectric HfO2 Compact Model
 
 
 Heracles is a physics-based compact model for HfO2-based ferroelectric capacitors. It includes thermal models, interface layers and accurately reproduces several device phenomena, such as transient polarization switching and capacitance hysteresis. Heracles consists of a stateful and computationally efficient non-equilibrium thermodynamics description of the device behaviour, allowing for efficient Monte Carlo simulations even in larger analog CMOS circuits. This makes Heracles suitable for Design-Technology Co-Optimization (DTCO) approaches to (analog) compute-in-memory, neuromorphic systems or sensory circuit design.
+
+## Project layout
+
+    docs/
+        index.md            # The documentation homepage
+    ngpsice/
+        modelcard.l         # Ngspice modelcard
+        testbench.sp        # Ngspice P-V hysteresis testbench
+    virtuoso/
+        cdf.il              # Virtuoso cdf file
+        fehlings2025.scs    # Spectre modelcard
+    LICENSE
+    README.md
+    heracles.va             # Heracles VerilogA source code
+
 
 ## Examples
 
@@ -19,9 +33,6 @@ For a demo in ngspice, compile the source code using the OpenVAF Verilog-A compi
 `ngspice ngspice/testbench.sp`
 
 ## Documentation
-[Heracles Documentation](https://bics-rug.github.io/heracles/)
-
-The documentation is still work in progress. 
 
 ## Contributing
 

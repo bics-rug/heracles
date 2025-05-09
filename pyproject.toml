@@ -1,0 +1,13 @@
+[project]
+name = "heracles"
+version = "0.2.0"
+description = "HfO2 ferroelectric capacitor compact model for circuit simulation "
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.9",
+]
