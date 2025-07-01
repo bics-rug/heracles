@@ -1,10 +1,6 @@
 /* Hafnium-Oxide Ferroelectric Capacitor
  *
  * Models the  polarization switching, capacitance and leakage current of a HZO FeCap.
- *
- * Do not connect the 'be' node to high impedance or floating nodes. If you have
- * convergence problems, try flipping the device around to connect 'be' to the lower
- * impedance node.
  */
 
 `include "constants.vams"
@@ -111,7 +107,7 @@ module heracles(te, be);
     branch(te, n_int) interface;
     branch(te, n_be) leakage;
     branch(n_int, n_be) fecap;
-    branch(n1, be) internal1;
+    branch(n1) internal1;
 
     analog begin
         // State variable via internal node potential
