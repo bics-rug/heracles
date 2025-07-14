@@ -13,15 +13,14 @@ To use the model in Cadence Virtuoso, create a cell called *fecap* with a symbol
 Alternatively create a *veriloga* view and paste in the source code, then import the model card in Maestro. Keep in mind that in this way mismatch Monte Carlo simulations may not work, depending on your Virtuoso configuration and CMOS PDK.
 
 ### Ngspice
-For a demo in ngspice, compile the source code using the OpenVAF Verilog-A compiler or download the osdi binary with the release. Then run the included testbench to get a basic hysteresis curve:
-
-`ngspice ngspice/testbench.sp`
+There is a compiled osdi binary shipped with every release, see the releases tab. You can find ngspice-based testbenches in the repository [heracles-testbenches](https://github.com/bics-rug/heracles-testbenches).
 
 ## Documentation
 
 ## Contributing
 
 ## Acknowledgements
+This work was supported by the European Research Council (ERC) through the European’s Union Horizon Europe Research and Innovation Programme under Grant Agreement No 101042585. Views and opinions expressed are however those of the authors only and do not necessarily reflect those of the European Union or the European Research Council. Neither the European Union nor the granting authority can be held responsible for them.
 
 ## Citation
 
