@@ -1,8 +1,22 @@
-# Heracles
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13844857.svg)](https://doi.org/10.5281/zenodo.13844857)
+# Heracles - A Ferroelectric HfO2 Compact Model
 
 
 Heracles is a physics-based compact model for HfO2-based ferroelectric capacitors. It includes thermal models, interface layers and accurately reproduces several device phenomena, such as transient polarization switching and capacitance hysteresis. Heracles consists of a stateful and computationally efficient non-equilibrium thermodynamics description of the device behaviour, allowing for efficient Monte Carlo simulations even in larger analog CMOS circuits. This makes Heracles suitable for Design-Technology Co-Optimization (DTCO) approaches to (analog) compute-in-memory, neuromorphic systems or sensory circuit design.
+
+## Project layout
+
+    docs/
+        index.md            # The documentation homepage
+    ngpsice/
+        modelcard.l         # Ngspice modelcard
+        testbench.sp        # Ngspice P-V hysteresis testbench
+    virtuoso/
+        cdf.il              # Virtuoso cdf file
+        fehlings2025.scs    # Spectre modelcard
+    LICENSE
+    README.md
+    heracles.va             # Heracles VerilogA source code
+
 
 ## Examples
 
@@ -14,17 +28,15 @@ To use the model in Cadence Virtuoso, create a cell called *fecap* with a symbol
 Alternatively create a *veriloga* view and paste in the source code, then import the model card in Maestro. Keep in mind that in this way mismatch Monte Carlo simulations may not work, depending on your Virtuoso configuration and CMOS PDK.
 
 ### Ngspice
-There is a compiled osdi binary shipped with every release, see the releases tab. You can find ngspice-based testbenches in the repository [heracles-testbenches](https://github.com/bics-rug/heracles-testbenches).
+For a demo in ngspice, compile the source code using the OpenVAF Verilog-A compiler or download the osdi binary with the release. Then run the included testbench to get a basic hysteresis curve:
+
+`ngspice ngspice/testbench.sp`
 
 ## Documentation
-[Heracles Documentation](https://bics-rug.github.io/heracles/)
-
-The documentation is still work in progress. 
 
 ## Contributing
 
 ## Acknowledgements
-This work was supported by the European Research Council (ERC) through the European’s Union Horizon Europe Research and Innovation Programme under Grant Agreement No 101042585. Views and opinions expressed are however those of the authors only and do not necessarily reflect those of the European Union or the European Research Council. Neither the European Union nor the granting authority can be held responsible for them.
 
 ## Citation
 
