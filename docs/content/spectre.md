@@ -1,0 +1,5 @@
+# Virtuoso
+
+To use the model in Cadence Virtuoso, create a cell called fecap with a symbol view (type schematicSymbol) and rename this symbol view to spectre. Create a symbol with 2 inout pins named te and be. Then, in the Virtuoso main window, open Tools/CDF/Edit and load cdf.il. Now import the model card in your Maestro test bench via Setup/Model Libraries, for example fehlings2024.scs for the model card of the source citation. In Setup/environment (or in the hierachy editor when used) make sure that the spectre view is included in switch and stop lists.
+
+Alternatively create a veriloga view and paste in the source code, then import the model card in Maestro. Keep in mind that in this way mismatch Monte Carlo simulations may not work, depending on your Virtuoso configuration and CMOS PDK.
