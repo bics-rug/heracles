@@ -1,7 +1,0 @@
-# Parameters
-
-## Ferroelectric
-
-## Interface
-
-## Depletion

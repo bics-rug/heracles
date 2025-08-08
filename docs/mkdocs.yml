@@ -4,6 +4,7 @@ nav:
   - About: about.md
   - Getting started: getstarted.md
   - Parameters: parameters.md
-  - Virtuoso: virtuoso.md
+  - Cadence Spectre: spectre.md
+docs_dir: content
 theme:
   name: material
